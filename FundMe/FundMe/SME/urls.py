@@ -5,5 +5,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'FundMe.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^sme/register', 'views.register'),
+    url(r'^register', 'FundMe.SME.views.register'),
 )
