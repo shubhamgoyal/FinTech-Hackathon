@@ -91,7 +91,8 @@ if __name__ == "__main__":
 					'cash_balance': 10000000,
 					'does_own_properties_without_mortgage': 'Yes'
 				}
-		]
+		],
+		'rating': 'A'
 	}
 	sme_2 = {
 		'reg_no': '199733405Y',
@@ -106,6 +107,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Garment Manufacturing with plant located in Shenzhen, with over 1800 workers; Manufacturing clothes, hats, export to UK, US',
 		'annual_sales_turnover_range_in_sgd': '>20M - < 50M',
 		'paid_up_capital_in_sgd': 10000000,
+		'rating': 'B'
 	}
 	sme_3 = {
 		'reg_no': '200001234A',
@@ -120,6 +122,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Established in 2000, Garment Manufacturing with plant located in Bangladesh, with over 1800 workers; Manufacturing clothes, hats, export to UK, US',
 		'annual_sales_turnover_range_in_sgd': '>20M - < 50M',
 		'paid_up_capital_in_sgd': 10000000,
+		'rating': 'B'
 	}
 	sme_4 = {
 		'reg_no': '200333405L',
@@ -134,6 +137,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Established in 2003, OEM Garment Manufacturing with plant located in Tianjin, with over 1000 workers; Manufacturing clothes, hats, export to UK, US',
 		'annual_sales_turnover_range_in_sgd': '>20M - <= 50M',
 		'paid_up_capital_in_sgd': 10000000,
+		'rating': 'B'
 	}
 	sme_5 = {
 		'reg_no': '201333406T',
@@ -148,6 +152,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Established in 2013, Garment Manufacturing with plant located in Bangladesh, with over 300 workers; Manufacturing clothes, hats, export to UK, US',
 		'annual_sales_turnover_range_in_sgd': '>5M - <= 20M',
 		'paid_up_capital_in_sgd': 5000000,
+		'rating': 'C'
 	}
 	sme_6 = {
 		'reg_no': '199833405P',
@@ -162,6 +167,7 @@ if __name__ == "__main__":
 		'brief_business_description': '"Established in 1998, Garment Manufacturing with plant located in Bangladesh, with over 500 workers; Manufacturing clothes, hats, export to UK, US',
 		'annual_sales_turnover_range_in_sgd': '>5M - <= 20M',
 		'paid_up_capital_in_sgd': 5000000,
+		'rating': 'C'
 	}
 	sme_7 = {
 		'reg_no': '200733400R',
@@ -176,6 +182,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Trading company to brands in Europe',
 		'annual_sales_turnover_range_in_sgd': '>5M - <= 20M',
 		'paid_up_capital_in_sgd': 500000,
+		'rating': 'C'
 	}
 	sme_8 = {
 		'reg_no': '198778400J',
@@ -190,6 +197,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Established trading company since 1987, mainly source from China nad export to US',
 		'annual_sales_turnover_range_in_sgd': '>5M - <= 20M',
 		'paid_up_capital_in_sgd': 500000,
+		'rating': 'D'
 	}
 	sme_9 = {
 		'reg_no': '20143341X',
@@ -204,6 +212,7 @@ if __name__ == "__main__":
 		'brief_business_description': 'Startup company specialised in creating apps for the financial sector; we have presence in HK and SG',
 		'annual_sales_turnover_range_in_sgd': '>1M - <= 5M',
 		'paid_up_capital_in_sgd': 10000,
+		'rating': 'D'
 	}
 	sme_10 = {
 		'reg_no': '20093901P',
@@ -216,7 +225,8 @@ if __name__ == "__main__":
 		'industry': 'Technology Startup',
 		'business_nature': 'Service',
 		'brief_business_description': 'Startup company developing health monitoring apps to track behavior',
-		'annual_sales_turnover_range_in_sgd': '<=1M'
+		'annual_sales_turnover_range_in_sgd': '<=1M',
+		'rating': 'D'
 	}
 	sme_collection.insert(sme_1)
 	sme_collection.insert(sme_2)
