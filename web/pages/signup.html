@@ -1,44 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>FundingME</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../css/fundingme.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-
-</head>
-
-<body>
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -54,91 +13,78 @@
             </div>
         </nav>
 
-        <div id="page-wrapper">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Sign Up</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-
-            <div class="row">
-                
-                    <div class="panel panel-default">
-                        <div id="body-business-intro" class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <form role="form">
-                                        <div class="form-group">
-                                            <label>Email</label>
-                                            <input id="registration-number" class="form-control">
-                                            This email will be your login credential
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Password</label>
-                                            <input id="pasword" type="password" class="form-control">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Reenter Password</label>
-                                            <input id="pasword-confirm" type="password" class="form-control">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label>Business Registration No. (as per ACRA)</label>
-                                            <input onkeyup="showRegisteredCompanyInfo(this);" id="registration-number" class="form-control">
-                                        </div>
-                                        <fieldset id="company-info" style="display: none;">
-                                            <div class="form-group">
-                                                <label>Registered Business Name</label>
-                                                <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Company Type</label>
-                                                <p class="form-control-static">PRIVATE LIMITED</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Principal Activity I</label>
-                                                <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Principal Activity II</label>
-                                                <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
-                                            </div>
-                                        </fieldset>
-                                            
-                                        <button type="submit" onclick=";" class="btn btn-default btn-primary">Proceed</button>
-                                        <button type="reset" class="btn btn-default">Reset</button>
-                                    </form>
-                                </div>
-                            </div>
-                            <!-- /.row (nested) -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                <!-- /.col-lg-12 -->
-            </div>
-
+  <div class="container-fluid">
+    <div class="row bg-info">
+        <div class="col-lg-12">
+            <h1 class="page-header">Sign Up</h1>
         </div>
-        <!-- /#page-wrapper -->
-
+        <!-- /.col-lg-12 -->
     </div>
+    <!-- /.row -->
+    <br />
+    <div class="row"><div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <form role="form">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input id="email" class="form-control" type="email" ng-model="user.email">
+                        This email will be your login credential
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input id="pasword" type="password" class="form-control" ng-model="user.password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Reenter Password</label>
+                        <input id="pasword-confirm" type="password" class="form-control" ng-model="user.password2">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Business Registration No. (as per ACRA)</label>
+                        <input onkeyup="showRegisteredCompanyInfo(this);" id="registration-number" class="form-control" ng-model="user.regis_no">
+                    </div>
+                    <fieldset id="company-info" style="display: none;">
+                        <div class="form-group">
+                            <label>Registered Business Name</label>
+                            <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Type</label>
+                            <p class="form-control-static">PRIVATE LIMITED</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Principal Activity I</label>
+                            <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Principal Activity II</label>
+                            <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
+                        </div>
+                    </fieldset>
+                    <div class="alert-danger" ng-show="showError">{{errormsg}}</div>
+                    <button type="submit" ng-click="registerFn(user, $event)" class="btn btn-default btn-primary">Proceed</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        <div class="col-lg-3"></div>
+        </div>
+<!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div><br />
     <!-- /#wrapper -->
-
-    <!-- jQuery -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="../js/fundingme.js"></script>    
-
-</body>
-
-</html>
+<!-- Footer -->
+    <footer class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center"><br />
+                    
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Funding.ME 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
