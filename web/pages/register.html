@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>FundingME</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../css/fundingme.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <script src="../js/fundingme.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">FundingME</a>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Create Company Profile</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-bank-product" onclick="showBankProduct();" class="panel-heading">
+                            INTERESTED LOAN TYPE
+                        </div>
+                        <div id="body-bank-product" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Business Loan
+                                                </label>
+                                            </div>
+                                            Amount
+                                            <div class="form-group input-group small-form-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">.00</span>
+                                        </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Overdraft
+                                                </label>
+                                            </div>
+                                            Amount
+                                            <div class="form-group input-group small-form-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">.00</span>
+                                        </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Property Loan
+                                                </label>
+                                            </div>
+                                            Amount
+                                            <div class="form-group input-group small-form-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">.00</span>
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox" value="">Equipment Loan
+                                                </label>
+                                            </div>
+                                            Amount
+                                            <div class="form-group input-group small-form-group">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">.00</span>
+                                        </div>
+                                        <button type="submit" onclick="return showPurpose();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>            
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-purpose" onclick="showPurpose();" class="panel-heading">
+                            PURPOSE OF FUNDING
+                        </div>
+                        <div id="body-purpose" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Working Capital
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                                    Capital Investment
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Daily Operations
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                                    Trade
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label style="width:500px;">
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+                                                    Others
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" onclick="return showBusinessIntro();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-business-intro" onclick="showBusinessIntro();" class="panel-heading">
+                            INTRODUCE YOUR BUSINESS
+                        </div>
+                        <div id="body-business-intro" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group" onclick="showRegisteredCompanyInfo();">
+                                            <label>Business Registration No. (as per ACRA)</label>
+                                            <input id="registration-number" class="form-control">
+                                        </div>
+                                        <fieldset id="company-info" disabled style="display: none;">
+                                            <div class="form-group">
+                                                <label>Registered Business Name</label>
+                                                <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company Type</label>
+                                                <p class="form-control-static">LIMITED EXEMPT PRIVATE COMPANY</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity I</label>
+                                                <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity II</label>
+                                                <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
+                                            </div>
+                                        </fieldset>
+                                            
+                                        <button type="submit" onclick="return showBusinessDetails();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-business-details" onclick="showBusinessDetails();" class="panel-heading">
+                            MORE ABOUT YOUR BUSINESS
+                        </div>
+                        <div id="body-business-details" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group" onclick="showRegisteredCompanyInfo();">
+                                            <label>Business Registration No. (as per ACRA)</label>
+                                            <input id="registration-number" class="form-control">
+                                        </div>
+                                        <fieldset id="company-info" disabled style="display: none;">
+                                            <div class="form-group">
+                                                <label>Registered Business Name</label>
+                                                <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company Type</label>
+                                                <p class="form-control-static">LIMITED EXEMPT PRIVATE COMPANY</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity I</label>
+                                                <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity II</label>
+                                                <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
+                                            </div>
+                                        </fieldset>
+                                            
+                                        <button type="submit" onclick="return showPersonalInfo();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-personal-info" onclick="showPersonalInfo();" class="panel-heading">
+                            PERSONAL INFORMATION
+                        </div>
+                        <div id="body-personal-info" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group" onclick="showRegisteredCompanyInfo();">
+                                            <label>Business Registration No. (as per ACRA)</label>
+                                            <input id="registration-number" class="form-control">
+                                        </div>
+                                        <fieldset id="company-info" disabled style="display: none;">
+                                            <div class="form-group">
+                                                <label>Registered Business Name</label>
+                                                <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company Type</label>
+                                                <p class="form-control-static">LIMITED EXEMPT PRIVATE COMPANY</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity I</label>
+                                                <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity II</label>
+                                                <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
+                                            </div>
+                                        </fieldset>
+                                            
+                                        <button type="submit" onclick="saveCredentials();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    
+
+
+
+</body>
+
+</html>
