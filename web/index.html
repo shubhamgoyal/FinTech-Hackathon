@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="css/fundingme.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -47,7 +48,7 @@
           <a class="navbar-brand" href="#">Funding.ME</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
+          <!-- <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
             </div>
@@ -56,7 +57,7 @@
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
             <a href="portal.html" class="btn btn-success">Register</a>
-          </form>
+          </form> -->
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -64,10 +65,34 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
+            <div style="background-color: rgba(0,0,0,0.5); width: 620px; padding: 0.4em; display: inline-block;">
             <h1>Funding.ME</h1>
             <h3>Trusted platform to match eligible SMEs with banks</h3>
+        </div>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <table id="client-main-table">
+                <tr>
+                    <td>
+                        <div class="client-box">
+                            <h2>Company</h2>    
+                            Looking for funding is hassless
+                            <br/><br/><br/>
+                            <button onclick="window.open('pages/signup.html', '_blank');" class="btn btn-default btn-primary">Register</button>
+                            <button onclick="window.open('pages/login.html', '_blank');" class="btn btn-default btn-primary">Login</button>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="client-box">
+                            <h2>Bank</h2>
+                            Looking for loaning company
+                            <br/>
+                            with Good Prospect
+                            <br/><br/>
+                            <button onclick="window.open('pages/login.html', '_blank');" class="btn btn-default btn-primary">Login</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
     </header>
 
