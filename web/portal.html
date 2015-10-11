@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>FundingME</title>
+    <title>Funding.ME</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -67,6 +67,13 @@
 <script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
  <script src="angular/angular-resource.js"></script>
 <script src="js/ng-flow-standalone.min.js"></script>
+<script>
+ $(document).ready(function() {
+     $('#dataTables-example').DataTable({
+             responsive: true
+     });
+ });
+ </script>
 <script >
 var app = angular.module('myApp', [
 'ngCookies',  
@@ -104,8 +111,9 @@ app.constant('ENV',{
     function configuration($routeProvider, $httpProvider, ENV, $locationProvider, $mdThemingProvider) {
 
         $routeProvider.
-              // JMR only temp for now...  when("/candmain", {templateUrl: ENV.base_url+"assets/zpartials/cand-main.html", controller: "candidateDashMainCtrl"}).
-              when("/signup", {templateUrl: ENV.base_url+"pages/signup.html", controller: "RegisterCtrl"}).
+              when("/panel", {templateUrl: ENV.base_url+"pages/panel.html", controller: "RegisterCtrl"}).
+              
+               when("/signup", {templateUrl: ENV.base_url+"pages/signup.html", controller: "RegisterCtrl"}).
               when("/createprofile", {templateUrl: ENV.base_url+"pages/register.html", controller: "RegisterCtrl"}).
  otherwise({redirectTo: '/signup'});
 
@@ -141,6 +149,20 @@ app.constant('ENV',{
     app.controller('RegisterCtrl', RegisterCtrl);
     
     function RegisterCtrl ($scope, $http, $cookieStore, $location, ENV) {
+        $scope.company = [
+       { img:'img/icon1.jpg', name: 'Homusk Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Technology', nature:'Service',yearofest: '2012' },
+       { img:'img/icon2.jpg', name: 'KJM Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Garment', nature:'Manufacturing',yearofest: '1997' },
+       { img:'img/icon3.jpg', name: 'Allion Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Garment', nature:'Manufacturing',yearofest: '2000' },
+       { img:'img/icon4.jpg', name: 'ABC PTE LTD ',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Garment', nature:'Manufacturing',yearofest: '2003' },
+       { img:'img/icon5.jpg', name: 'Cheung Yue Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Garment', nature:'Trading',yearofest: '2013' },
+       { img:'img/icon6.jpg', name: 'Workmaster Garment',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Technology', nature:'Trading',yearofest: '1998' },
+       { img:'img/icon7.jpg', name: 'Manufacturing Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Technology', nature:'Service',yearofest: '2007' },
+       { img:'img/icon8.jpg', name: 'Walmart Company Pte LTd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Garment', nature:'Trading',yearofest: '1987' },
+       { img:'img/icon9.jpg', name: 'Gum Tree Trading Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Technology', nature:'Service',yearofest: '2014' },
+       { img:'img/icon10.jpg', name: 'Goinvest Group Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Garment', nature:'Manufacturing',yearofest: '2009' },
+       { img:'img/icon33.jpg', name: 'Tripple Pte Ltd',desc:'Technology company utilising the best of data science and behavioral medicine to help patients with chronic diseases', turnover: '> 1M \n < 5M', industry: 'Technology', nature:'Service',yearofest: '2013' }
+   ];
+
         //set the public key from the CI constant
   $scope.registerFn = function(user, clickEvent) {
       $scope.showError = false;
