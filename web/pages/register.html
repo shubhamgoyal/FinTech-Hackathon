@@ -1,0 +1,327 @@
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Funding.ME</a>
+            </div>
+        </nav>
+
+  <div class="container-fluid">
+    <div class="row bg-info">
+        <div class="col-lg-12">
+            <h1 class="page-header">Create Company Profile</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <br />
+     <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-business-intro" class="panel-heading">
+                            BUSINESS INTRODUCTION
+                        </div>
+                        <div id="body-business-intro" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <label>Company Background</label>
+                                            <textarea class="form-control" placeholder="Briefly introduce your company and why your company needs funding" rows="3"></textarea>
+                                        </div>
+                                        <div class="form-group" flow-init>
+                                            <label>Video Introduction (Optional)</label><br />
+                         {{$flow.files[0].name}}
+    					<button class="btn" ng-hide="$flow.files.length" flow-btn>Upload</button>
+    					<a href="#/landcreate" class="btn btn-danger" ng-show="$flow.files.length"
+    					ng-click="$flow.cancel()">Remove</a>
+                                            <p class="help-block">File format: .mp4, .avi, .wav, .3gp</p>
+                                      
+                                                <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}" ng-show="$flow.files.length">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="{$flow.files[0].progress() * 100}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: ($flow.files[0].progress() * 100) + '%'}" style="width: 100%;">
+                                                                <span class="sr-only ng-binding">1% Complete</span>
+                                                        </div>
+                                                </div>
+                                       </div>
+                                        
+                                        <button type="submit" class="btn btn-default btn-primary" onclick="return showBusinessDetails();">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-business-details" onclick="showBusinessDetails();" class="panel-heading">
+                            DETAILED BUSINESS INFORMATION
+                        </div>
+                        <div id="body-business-details" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <label>Upload ACRA file</label>
+                                                        <div class="form-group" flow-init>
+                                            <label>Video Introduction (Optional)</label><br />
+                         {{$flow.files[0].name}}
+    					<button class="btn" ng-hide="$flow.files.length" flow-btn>Upload</button>
+    					<a href="#/landcreate" class="btn btn-danger" ng-show="$flow.files.length"
+    					ng-click="$flow.cancel()">Remove</a>
+                                            <p class="help-block">File format: .pdf</p>
+                                      
+                                                <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}" ng-show="$flow.files.length">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="{$flow.files[0].progress() * 100}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: ($flow.files[0].progress() * 100) + '%'}" style="width: 100%;">
+                                                                <span class="sr-only ng-binding">1% Complete</span>
+                                                        </div>
+                                                </div>
+                                       </div>
+                                                    </td>
+                                                    <td style="text-align: center; width: 200px;">
+                                                        OR           
+                                                    </td>
+                                                    <td>
+                                                        <button type="submit" class="btn btn-default btn-primary">Manual input</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                        <fieldset id="company-info" disabled style="display: none;">
+                                            <div class="form-group">
+                                                <label>Registered Business Name</label>
+                                                <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Company Type</label>
+                                                <p class="form-control-static">LIMITED EXEMPT PRIVATE COMPANY</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity I</label>
+                                                <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Principal Activity II</label>
+                                                <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
+                                            </div>
+                                        </fieldset>
+                                            
+                                        <button type="submit" onclick="return showBankProduct();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-bank-product" onclick="showBankProduct();" class="panel-heading">
+                            INTERESTED FACILITY
+                        </div>
+                        <div id="body-bank-product" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <div class="checkbox">
+                                                <table>
+                                                    <tr>
+                                                        <td style="width: 200px;">
+                                                            <label>
+                                                                <input type="checkbox" value="">Business Loan
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <br/>
+                                                            <div class="form-group input-group small-form-group">
+                                                            <input type="text" placeholder="Loan amount" class="form-control">
+                                                            <span class="input-group-addon">.00</span>
+                                                            </div>            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="checkbox">
+                                                <table>
+                                                    <tr>
+                                                        <td style="width: 200px;">
+                                                            <label>
+                                                                <input type="checkbox" value="">Overdraft
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <br/>
+                                                            <div class="form-group input-group small-form-group">
+                                                            <input type="text" placeholder="Loan amount" class="form-control">
+                                                            <span class="input-group-addon">.00</span>
+                                                            </div>            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="checkbox">
+                                                <table>
+                                                    <tr>
+                                                        <td style="width: 200px;">
+                                                            <label>
+                                                                <input type="checkbox" value="">Property Loan
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <br/>
+                                                            <div class="form-group input-group small-form-group">
+                                                            <input type="text" placeholder="Loan amount" class="form-control">
+                                                            <span class="input-group-addon">.00</span>
+                                                            </div>            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="checkbox">
+                                                <table>
+                                                    <tr>
+                                                        <td style="width: 200px;">
+                                                            <label>
+                                                                <input type="checkbox" value="">Equipment Loan
+                                                            </label>
+                                                        </td>
+                                                        <td>
+                                                            <br/>
+                                                            <div class="form-group input-group small-form-group">
+                                                            <input type="text" placeholder="Loan amount" class="form-control">
+                                                            <span class="input-group-addon">.00</span>
+                                                            </div>            
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <button type="submit" onclick="return showPurpose();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>            
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-purpose" onclick="showPurpose();" class="panel-heading">
+                            PURPOSE OF FUNDING
+                        </div>
+                        <div id="body-purpose" style="display: none;" class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <form role="form">
+                                        <div class="form-group">
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="checkbox" value="option1" checked>
+                                                    &nbsp;Working Capital
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="checkbox" value="option2">
+                                                    &nbsp;Capital Investment
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="checkbox" value="option3">
+                                                    &nbsp;Daily Operations
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="checkbox" value="option3">
+                                                    &nbsp;Trade
+                                                </label>
+                                            </div>
+                                            <div class="radio">
+                                                <label style="width:500px;">
+                                                    <input type="checkbox" value="option3">
+                                                    &nbsp;Others
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button type="submit" onclick="return showPersonalInfo();" class="btn btn-default btn-primary">Next</button>
+                                        <button type="reset" class="btn btn-default">Reset</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div id="head-personal-info" onclick="showPersonalInfo();" class="panel-heading">
+                            MANAGEMENTS' INFORMATION
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12" style="text-align: right;">
+                    <button type="submit" onclick="window.open('./profile.html', '_blank');" class="btn btn-default btn-primary">Completed</button>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+
+    </div><br />
+    <!-- /#wrapper -->
+<!-- Footer -->
+    <footer class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center"><br />
+                    
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Funding.ME 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>

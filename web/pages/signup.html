@@ -1,0 +1,90 @@
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Funding.ME</a>
+            </div>
+        </nav>
+
+  <div class="container-fluid">
+    <div class="row bg-info">
+        <div class="col-lg-12">
+            <h1 class="page-header">Sign Up</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <br />
+    <div class="row"><div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <form role="form">
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input id="email" class="form-control" type="email" ng-model="user.email">
+                        This email will be your login credential
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input id="pasword" type="password" class="form-control" ng-model="user.password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Reenter Password</label>
+                        <input id="pasword-confirm" type="password" class="form-control" ng-model="user.password2">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Business Registration No. (as per ACRA)</label>
+                        <input onkeyup="showRegisteredCompanyInfo(this);" id="registration-number" class="form-control" ng-model="user.regis_no">
+                    </div>
+                    <fieldset id="company-info" style="display: none;">
+                        <div class="form-group">
+                            <label>Registered Business Name</label>
+                            <p class="form-control-static">MEE REBUS WITH PRAWN PTE LTD</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Company Type</label>
+                            <p class="form-control-static">PRIVATE LIMITED</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Principal Activity I</label>
+                            <p class="form-control-static">WHOLESALE OF MEE REBUS</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Principal Activity II</label>
+                            <p class="form-control-static">WHOLESALE OF TOMYUM FRIED RICE</p>
+                        </div>
+                    </fieldset>
+                    <div class="alert-danger" ng-show="showError">{{errormsg}}</div>
+                    <button type="submit" ng-click="registerFn(user, $event)" class="btn btn-default btn-primary">Proceed</button>
+                    <button type="reset" class="btn btn-default">Reset</button>
+                </form>
+            </div>
+        <div class="col-lg-3"></div>
+        </div>
+<!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+
+    </div><br />
+    <!-- /#wrapper -->
+<!-- Footer -->
+    <footer class="bg-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center"><br />
+                    
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Funding.ME 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
