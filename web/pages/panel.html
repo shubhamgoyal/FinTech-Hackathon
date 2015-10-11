@@ -34,7 +34,7 @@
 
                             <div class="form-group">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-4">
                                         
                                         <label>Industry</label>
                                             <select class="form-control" style="width: 300px;" ng-model="search.industry">
@@ -45,7 +45,17 @@
                                                 <option>Retail</option>
                                             </select>
                                     </div>
-                                    <div class="col-md-6"><input class="form-control" type="text" placeholder="Search Company" ng-model="search.name" />
+                                    <div class="col-md-4">
+                                        
+                                        <label>Business Nature</label>
+                                            <select class="form-control" style="width: 300px;" ng-model="search.nature">
+                                                <option>Service</option>
+                                                <option>Trading</option>
+                                                <option>Manufacturing</option>
+                                            </select>
+                                    </div>
+                                    
+                                    <div class="col-md-4"><input class="form-control" type="text" placeholder="Search Company" ng-model="search.name" />
                                        </div>
                                 </div>
                                             
