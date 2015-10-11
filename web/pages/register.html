@@ -1,7 +1,7 @@
     <div id="wrapper">
 
         <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">FundingME</a>
+                <a class="navbar-brand" href="index.html">Funding.ME</a>
             </div>
         </nav>
 
@@ -36,11 +36,20 @@
                                             <label>Company Background</label>
                                             <textarea class="form-control" placeholder="Briefly introduce your company and why your company needs funding" rows="3"></textarea>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Video Introduction (Optional)</label>
-                                            <input type="file">
+                                        <div class="form-group" flow-init>
+                                            <label>Video Introduction (Optional)</label><br />
+                         {{$flow.files[0].name}}
+    					<button class="btn" ng-hide="$flow.files.length" flow-btn>Upload</button>
+    					<a href="#/landcreate" class="btn btn-danger" ng-show="$flow.files.length"
+    					ng-click="$flow.cancel()">Remove</a>
                                             <p class="help-block">File format: .mp4, .avi, .wav, .3gp</p>
-                                        </div>
+                                      
+                                                <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}" ng-show="$flow.files.length">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="{$flow.files[0].progress() * 100}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: ($flow.files[0].progress() * 100) + '%'}" style="width: 100%;">
+                                                                <span class="sr-only ng-binding">1% Complete</span>
+                                                        </div>
+                                                </div>
+                                       </div>
                                         
                                         <button type="submit" class="btn btn-default btn-primary" onclick="return showBusinessDetails();">Next</button>
                                         <button type="reset" class="btn btn-default">Reset</button>
@@ -72,7 +81,20 @@
                                                 <tr>
                                                     <td>
                                                         <label>Upload ACRA file</label>
-                                                        <input type="file">
+                                                        <div class="form-group" flow-init>
+                                            <label>Video Introduction (Optional)</label><br />
+                         {{$flow.files[0].name}}
+    					<button class="btn" ng-hide="$flow.files.length" flow-btn>Upload</button>
+    					<a href="#/landcreate" class="btn btn-danger" ng-show="$flow.files.length"
+    					ng-click="$flow.cancel()">Remove</a>
+                                            <p class="help-block">File format: .pdf</p>
+                                      
+                                                <div class="progress progress-striped" ng-class="{active: $flow.files[0].isUploading()}" ng-show="$flow.files.length">
+                                                        <div class="progress-bar" role="progressbar" aria-valuenow="{$flow.files[0].progress() * 100}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: ($flow.files[0].progress() * 100) + '%'}" style="width: 100%;">
+                                                                <span class="sr-only ng-binding">1% Complete</span>
+                                                        </div>
+                                                </div>
+                                       </div>
                                                     </td>
                                                     <td style="text-align: center; width: 200px;">
                                                         OR           

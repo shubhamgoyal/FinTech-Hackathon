@@ -151,6 +151,8 @@ app.constant('ENV',{
                 $(clickEvent.target).button("reset");
                 return false;
             }
+         $location.path("/createprofile");    
+        /*
              $http.post("http://localhost:82/index.php", user).success(function(data, status, headers, config) {
                         $(clickEvent.target).button("reset");
                         if (status === 201 || status === 200){
@@ -158,7 +160,7 @@ app.constant('ENV',{
                         }
                         }).error(function(data, status){
                             alert("Registration failed");
-                        });   
+                        });*/   
         }; //END registerFn
 
 
