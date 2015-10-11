@@ -7,6 +7,7 @@ import pprint
 from django.shortcuts import render, render_to_response
 from django.template import RequestContext
 from django.views.decorators.cache import never_cache
+import json
 
 LIST_POSSIBLE_ALL_FIELDS_REGISTER_SME = [
 	'email',
@@ -35,10 +36,15 @@ def get_list_of_all_sme_organizations_from_db():
 @csrf_exempt
 def register(request):
 	if request.method == 'POST':
+		# print(request)
+		print(request.POST)
+		received_json_data = json.loads(request.body.decode('utf-8'))
+		print(received_json_data)
 		sme = {}
 		for field in LIST_POSSIBLE_ALL_FIELDS_REGISTER_SME:
-			if field in request.POST:
-				sme[field] = request.POST[field]
+			if field in received_json_data:
+				sme[field] = received_json_data[field]
+				print(sme)
 		try:
 			db.sme.insert(sme)
 			
