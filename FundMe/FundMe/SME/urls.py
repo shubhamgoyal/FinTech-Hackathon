@@ -7,4 +7,5 @@ urlpatterns = patterns('',
 
     url(r'^register', 'FundMe.SME.views.register'),
     url(r'^search', 'FundMe.SME.views.search'),
+    url(r'^send_email', 'FundMe.SME.views.send_email'),
 )
