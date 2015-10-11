@@ -66,7 +66,9 @@
                         <p class="chat-body">
 
 In this century, for the first time in human history, chronic diseases (Non-communicable diseases) kill more people than infectious diseases. That's a BIG DEAL. But it does not have to be.
-</p><button class="btn btn-primary" onClick="alert('Email sent!')">Connect!</button>
+</p><button class="btn btn-primary" onClick="$.get( 'http://localhost:8000/sme/send_email', function( data ) {
+  alert( 'Email sent!' );
+});">Connect!</button>
 <img style="margin-left: 50px;" src="img/certified.jpg" width="60px" /><img style="margin-left: 30px;" src="img/accredited.jpg" width="70px" />
                     </div>
                     <div class="col-md-4"><video class="thumbnail" width="100%" src="interview.mp4" controls></video></div>

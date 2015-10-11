@@ -53,14 +53,14 @@
     <script src="js/fundingme.js"></script> 
     
 <!-- Angular Material Dependencies -->
-<script src="//cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-cookies.js"></script>
+<script src="http://cdn.jsdelivr.net/hammerjs/2.0.4/hammer.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-cookies.js"></script>
 <script src="angular/angular-route.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
-<script src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+<script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
 
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="js/ie10-viewport-bug-workaround.js"></script>
@@ -173,16 +173,15 @@ app.constant('ENV',{
                 $(clickEvent.target).button("reset");
                 return false;
             }
-         $location.path("/createprofile");    
-        /*
-             $http.post("http://localhost:82/index.php", user).success(function(data, status, headers, config) {
+            console.log(user)
+             $http.post("http://localhost:8000/sme/register", user).success(function(data, status, headers, config) {
                         $(clickEvent.target).button("reset");
                         if (status === 201 || status === 200){
                             $location.path("/createprofile");
                         }
                         }).error(function(data, status){
                             alert("Registration failed");
-                        });*/   
+                        });
         }; //END registerFn
 
 

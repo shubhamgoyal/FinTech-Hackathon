@@ -32,6 +32,12 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Phone number</label>
+                        <input id="phoneNumber" class="form-control" type="number" ng-model="user.phoneNumber">
+                        This number will be used to send you your one time password
+                    </div>
+
+                    <div class="form-group">
                         <label>Password</label>
                         <input id="pasword" type="password" class="form-control" ng-model="user.password">
                     </div>
@@ -43,7 +49,7 @@
 
                     <div class="form-group">
                         <label>Business Registration No. (as per ACRA)</label>
-                        <input onkeyup="showRegisteredCompanyInfo(this);" id="registration-number" class="form-control" ng-model="user.regis_no">
+                        <input onkeyup="showRegisteredCompanyInfo(this);" id="registration-number" class="form-control" ng-model="user.reg_no">
                     </div>
                     <fieldset id="company-info" style="display: none;">
                         <div class="form-group">
