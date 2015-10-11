@@ -4,8 +4,8 @@ This is a web application for the Funding.Me platform.
 
 The team behind this:
 1. Fiona Ng (Business Development and Operations)
-2. Tan See You (Software Engineer)
-3. Lee Chun How (Software Engineer)
+2. Tan See Youu (Software Engineer)
+3. Lee Chun Hoe (Software Engineer)
 4. Shubham Goyal (Software Engineer)
 
 For Developers -
